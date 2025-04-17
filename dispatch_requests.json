@@ -1,6 +1,6 @@
 [
   {
-    "component_id": "78cf1959-4d48-4561-bcbb-b4c239a32dcb",
+    "component_id": "596dded0-05d2-411e-b5b1-b55ccca5c791",
     "branch_name": "main",
     "workflow_file_name": "cbp-deploy.yaml",
     "inputs": {
