@@ -25,9 +25,8 @@ jobs:
         uses: https://github.com/cloudbees-io/register-build-artifact@v1
         with:
           name: App3-APIs
-          version: 1.0.0
-          url: docker.io/App3/APIs:1.0.0
-          digest: "sha256:l7b344ee09af5e43a8geb6c5cfpc25ccf269ee113168c19722f87876677c5cb2"
+          version: 3.0.0
+          url: docker.io/App3/APIs:3.0.0
 
   deploy:
     needs:
