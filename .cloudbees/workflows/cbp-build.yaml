@@ -25,18 +25,15 @@ jobs:
         uses: https://github.com/cloudbees-io/register-build-artifact@v1
         with:
           name: App3-APIs
-          version: 3.0.0
-          url: docker.io/App3/APIs:3.0.0
+          version: 5.0.0
+          url: docker.io/App3/APIs:5.0.0
 
   deploy:
-    needs:
-      - build
     steps:
-      - name: Prepare Manifest
-        uses: cloudbees-io/checkout@v1
-
-      - name: Trigger Deployment
-        uses: cloudbees-io/workflows-dispatch@main
+      - name: Inform system that an artifact version was deployed
+        uses: cloudbees-io/register-deployed-artifact@v1
         with:
-          workflows-dispatch-file: dispatch_requests.json
-          token: ${{ secrets.MY_PAT }}
+          name: App3-APIs
+          version: 5.0.0
+          url: docker.io/App3/APIs:5.0.0
+          target-environment: "qa"
