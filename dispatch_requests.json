@@ -4,7 +4,7 @@
     "branch_name": "main",
     "workflow_file_name": "cbp-deploy.yaml",
     "inputs": {
-      "artifactName": "App1-APIs",
+      "artifactName": "App3-APIs",
       "artifactVersion": "1.0.0",
       "environment": "qa"
     }
