@@ -25,8 +25,8 @@ jobs:
         uses: https://github.com/cloudbees-io/register-build-artifact@v1
         with:
           name: App3-APIs
-          version: 7.0.0
-          url: docker.io/App3/App3-APIs:7.0.0
+          version: 8.0.0
+          url: docker.io/App3/App3-APIs:8.0.0
 
   deploy:
     needs: [build]
@@ -35,6 +35,6 @@ jobs:
         uses: cloudbees-io/register-deployed-artifact@v1
         with:
           name: App3-APIs
-          version: 7.0.0
-          url: docker.io/App3/App3-APIs:7.0.0
+          version: 8.0.0
+          url: docker.io/App3/App3-APIs:8.0.0
           target-environment: "qa"
